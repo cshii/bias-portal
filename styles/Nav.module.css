@@ -1,0 +1,28 @@
+/* TODO: clean this up later, try to center center tht title  */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-fbetween;
+    background: transparent;
+}
+
+.header a {
+    color: white;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.begin {
+    text-align: left;
+}
+
+.center {
+    justify-self: center;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.end {
+    text-align: right;
+}
