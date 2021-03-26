@@ -40,3 +40,7 @@
     align-self: flex-end;
     font-size: 2rem;
 }
+
+.iconlist span:hover {
+    color: rgb(91, 91, 91);
+}

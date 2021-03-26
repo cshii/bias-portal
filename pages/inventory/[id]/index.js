@@ -1,20 +1,61 @@
 import { server } from '../../../config';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Image from 'next/image';
+
 import Meta from '../../../components/Meta';
+import inventoryStyles from '../../../styles/Inventory.module.css';
+
+import { Row, Col, Typography, Button, Select, Divider, Carousel } from 'antd';
+const { Text, Title } = Typography;
+const { Option } = Select;
 
 const piece = ({ piece }) => {
-    // const router = useRouter()
-    // const { id } = router.query
-    console.log('piece ', piece)
+
+    console.log('piece ', piece);
+
     return (
-        <>
+        <div style={{ marginTop: '12vh' }}>
             <Meta title={piece.name} description={piece.description} />
-            <h1>{piece.name}</h1>
-            <p>{piece.description}</p>
-            <br />
-            <Link href='/'>Go Back</Link>
-        </>
+
+            <Row>
+                <Col span={18}>
+                    <div style={{ margin: '2rem 6rem 1rem 6rem', position: 'relative', width: '400px', height: '550px' }}>
+                        <Image src={piece.image} layout='fill' />
+                    </div>
+                </Col>
+                <Col span={6}>
+                    {/* <Row align='bottom' justify='start' style={{height: '100%'}}> */}
+                    <div className={inventoryStyles.display}>
+
+
+                        <Title>
+                            {piece.name}
+                        </Title>
+                        <Title level={5}>
+                            {piece.description}
+                        </Title>
+                        <Divider />
+                        <Select style={{ width: '100%' }} placeholder='Select Size' bordered={false} disbaled={`${piece.sm}` === '0' && `${piece.ml}` === '0' ? true : false}>
+                            <Option value='1' disabled={`${piece.sm}` === '0' ? true : false}>
+                                {`${piece.sm}` === '0' ? 'Small/Medium - out of stock' : 'Small/Medium'}
+
+                            </Option>
+                            <Option value='2' disabled={`${piece.ml}` === '0' ? true : false}>
+                                {`${piece.ml}` === '0' ? 'Medium/Large - out of stock' : 'Medium/Large'}
+                            </Option>
+                        </Select>
+                        <Divider />
+                        <Row justify='center'>
+                            <Button size='large'>
+                                ADD TO CART
+                                </Button>
+                        </Row>
+                    </div>
+                    {/* </Row> */}
+                </Col>
+            </Row>
+
+        </div>
     )
 }
 

@@ -2,7 +2,7 @@ export const inventory = [
   {
     id: '1',
     name: 'Crop Top',
-    price: '15',
+    price: '106',
     description: 'this is a crop top',
     image: '/inventory/corvette1.jpeg',
     backImage: '/inventory/testback.jpg',
@@ -16,7 +16,7 @@ export const inventory = [
   {
     id: '2',
     name: 'Retro Top',
-    price: '15',
+    price: '86',
     description: 'this is a crop top as well',
     image: '/inventory/testfront.jpg',
     backImage: '/inventory/testback.jpg',
@@ -30,7 +30,7 @@ export const inventory = [
   {
     id: '3',
     name: 'Racer Dress',
-    price: '15',
+    price: '60',
     description: 'this is a crop top as well',
     image: '/inventory/testback.jpg',
     collectionID: '',
@@ -42,7 +42,7 @@ export const inventory = [
   {
     id: '4',
     name: 'Long Sleeve Syncup',
-    price: '15',
+    price: '30',
     description: 'this is a crop top as well',
     image: '/inventory/test2front.jpg',
     backImage: '/inventory/testback.jpg',
@@ -56,7 +56,7 @@ export const inventory = [
   {
     id: '5',
     name: 'LaLaLa',
-    price: '15',
+    price: '150',
     description: 'this is a crop top as well',
     image: '/inventory/corvette1.jpeg',
     backImage: '/inventory/testback.jpg',
