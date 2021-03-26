@@ -1,7 +1,7 @@
 import navStyles from '../styles/Nav.module.css';
 import Link from 'next/Link';
 
-import { Layout, Menu, Typography, Input, Tooltip, Dropdown, Row, Col } from 'antd';
+import { Menu, Typography, Input, Dropdown, Row, Col } from 'antd';
 import { UserOutlined, ShoppingOutlined, SearchOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
@@ -19,7 +19,8 @@ const Nav = () => {
                 </Menu.Item>
         </Menu>
     );
-
+    
+    // TODO: fix dropdown :/
     return (
         <div className={navStyles.fixed}>
             <Row className={navStyles.nav}>
@@ -27,10 +28,13 @@ const Nav = () => {
                     {navStyles.begin} >
                     <Link href='/inventory'>SHOP</Link>
                     <Dropdown overlay={menu}>
-                        <Text style={{color: 'white'}}>
-                            COLLECTIONS
+                        <a onClick={e => e.preventDefault()}>
 
+                            <Text className="ant-dropdown-link" style={{ color: 'black', fontWeight: 'bold' }}>
+                                COLLECTIONS
+    
                         </Text>
+                        </a>
                     </Dropdown>
                 </Col>
 
@@ -40,7 +44,7 @@ const Nav = () => {
 
                 <Col span={6} className={navStyles.end} >
                     <Link href='/about'>OUR STORY</Link>
-                    <Input style={{color: '#fff'}} placeholder='SEARCH' bordered={false} style={{width: '12vw'}}/>
+                    <Input style={{ width: '8vw', fontWeight: 'bold' }} placeholder='SEARCH' bordered={false}  />
                 </Col>
             </Row>
         </div>

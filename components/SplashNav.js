@@ -19,6 +19,7 @@ const SplashNav = () => {
                 </Menu.Item>
         </Menu>
     );
+// TODO: fix dropdown :/
 
     return (
         <div className={navStyles.fixed}>
@@ -27,7 +28,7 @@ const SplashNav = () => {
                     {navStyles.begin} >
                     <Link href='/inventory'>SHOP</Link>
                     <Dropdown overlay={menu}>
-                        <Text style={{color: 'white'}}>
+                        <Text className="ant-dropdown-link" style={{color: 'white', fontWeight: 'bold'}}>
                             COLLECTIONS
 
                         </Text>
@@ -40,7 +41,7 @@ const SplashNav = () => {
 
                 <Col span={6} className={navStyles.end} >
                     <Link href='/about'>OUR STORY</Link>
-                    <Input style={{color: '#fff'}} placeholder='SEARCH' bordered={false} style={{width: '12vw'}}/>
+                    <Input style={{color: 'white', width: '8vw', fontWeight: 'bold'}} placeholder='SEARCH' bordered={false} />
                 </Col>
             </Row>
         </div>

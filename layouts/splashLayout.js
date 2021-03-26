@@ -1,10 +1,9 @@
 import Meta from '../components/Meta';
-import Footer from '../components/Footer';
 import SplashNav from '../components/SplashNav';
+import Footer from '../components/Footer';
 import Head from 'next/head';
 
 import styles from '../styles/Layout.module.css';
-
 
 const Layout = ({ children }) => {
 

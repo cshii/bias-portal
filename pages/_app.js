@@ -1,18 +1,16 @@
 import Layout from '../components/Layout';
-import Nav from '../components/Nav';
 import '../styles/globals.css';
 import 'antd/dist/antd.css';
 
 function MyApp({ Component, pageProps }) {
 
-  const Navigation = Component.Navigation || Nav;
+  const CustomLayout = Component.Layout || Layout;
 
-  console.log('custom layout ', Navigation);
 
   return (
-    <Layout Navigation={Navigation}>
+    <CustomLayout>
       <Component {...pageProps} />
-    </Layout>
+    </CustomLayout>
   )
 }
 
