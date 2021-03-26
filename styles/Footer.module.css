@@ -1,0 +1,42 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+}
+
+.footer a {
+    color: black;
+    margin: 10px;
+}
+
+
+.heading {
+    font-weight: bold;
+    font-size: 2rem;
+}
+/* RIGHT SIDE */
+
+.textGroup {
+    display: flex;
+    justify-content: start;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* LEFT SIDE */
+
+.iconGroup {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column; 
+}
+
+.iconlist {
+    align-self: flex-end;
+    font-size: 2rem;
+}

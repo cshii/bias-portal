@@ -1,15 +1,23 @@
-/* TODO: clean this up later, try to center center tht title  */
+/* TODO: make reactive  */
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-fbetween;
-    background: transparent;
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
-.header a {
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+}
+
+.nav a {
     color: white;
-    margin: 10px;
+    margin: 2rem;
     font-weight: bold;
 }
 
@@ -25,4 +33,22 @@
 
 .end {
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.splashNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+}
+
+.splashNav a {
+    color: black;
+    margin: 2rem;
+    font-weight: bold;
 }

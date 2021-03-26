@@ -1,18 +1,35 @@
-import {server} from '../config';
-import InventoryList from '../components/InventoryList';
+import Head from 'next/head';
 
-// THIS IS YOUR HOME PAGE
+import Layout from '../layouts/splashLayout';
+import { server } from '../config';
+import { Row, Col } from 'antd';
 
-export default function Home({ articles }) {
+import splashStyles from '../styles/Splash.module.css';
+
+const Home = ({ articles }) => {
   console.log(
 
   )
   return (
-    <div> 
-      {/* <ArticleList articles={articles}/> */}
+    <div className={splashStyles.background}>
+      <div className={splashStyles.screen}>
+        <div className={splashStyles.display}>
+          <Row>
+            <h1 className={splashStyles.title}><span>BIAS</span> BRANDS</h1>
+
+          </Row>
+          <Row>
+            <p className={splashStyles.description}>CHOOSE SUSTAINABLE FASHION</p>
+          </Row>
+        </div>
+      </div>
     </div>
   )
-}
+};
+
+Home.Layout = Layout;
+
+export default Home;
 
 
 // export const getStaticProps = async () => {
