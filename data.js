@@ -4,68 +4,120 @@ export const inventory = [
     name: 'Crop Top',
     price: '106',
     description: 'this is a crop top',
-    image: '/inventory/corvette1.jpeg',
-    backImage: '/inventory/testback.jpg',
-    additionalImage: '/inventory/testfront.jpg',
+    category: 'crop top',
+    details: {
+      materials: ['cotton', 'spandex'],
+      fits: ['oversized'],
+      additional: ['hemmed bottoms', 'discolored', 'seasonsed', 'distressed']
+    },
+    image: {
+      main: '/inventory/corvette1.jpeg',
+      back: '/inventory/testback.jpg',
+      front: '/inventory/testfront.jpg',
+      additional: '/inventory/corvette1.jpeg'
+    },
+
     collectionID: '1',
     profileID: '',
     sm: '1',
     ml: '1',
-    out: false
+    related: ['2', '3', '4', '5']
   },
   {
     id: '2',
     name: 'Retro Top',
     price: '86',
     description: 'this is a crop top as well',
-    image: '/inventory/testfront.jpg',
-    backImage: '/inventory/testback.jpg',
-    additionalImage: '/inventory/testfront.jpg',
-    collectionID: '',
+    category: 'dress',
+
+    details: {
+      materials: ['nylon'],
+      fits: ['oversized'],
+      additional: ['hemmed bottoms', 'discolored', 'seasonsed', 'distressed']
+    },
+    image: {
+      main: '/inventory/corvette1.jpeg',
+      back: '/inventory/testback.jpg',
+      front: '/inventory/testfront.jpg',
+      additional: '/inventory/corvette1.jpeg'
+    },
+    collectionID: '1',
     profileID: '',
     sm: '1',
     ml: '0',
-    out: false
+    related: ['1', '3', '4', '5']
   },
   {
     id: '3',
     name: 'Racer Dress',
     price: '60',
     description: 'this is a crop top as well',
-    image: '/inventory/testback.jpg',
-    collectionID: '',
+    category: 'jacket',
+
+    details: {
+      materials: ['cotton'],
+      fits: ['oversized'],
+      additional: ['hemmed bottoms', 'discolored', 'seasonsed', 'distressed']
+    },
+    image: {
+      main: '/inventory/corvette1.jpeg',
+      back: '/inventory/testback.jpg',
+      front: '/inventory/testfront.jpg',
+      additional: '/inventory/corvette1.jpeg'
+    },
+    collectionID: '1',
     profileID: '',
     sm: '0',
     ml: '0',
-    out: false
+    related: ['1', '2', '4', '5']
   },
   {
     id: '4',
     name: 'Long Sleeve Syncup',
     price: '30',
     description: 'this is a crop top as well',
-    image: '/inventory/test2front.jpg',
-    backImage: '/inventory/testback.jpg',
-    additionalImage: '/inventory/testfront.jpg',
-    collectionID: '',
+    category: 'sport bra crop',
+
+    details: {
+      materials: ['nylon'],
+      fits: ['mini'],
+      additional: ['hemmed bottoms', 'discolored', 'seasonsed', 'distressed']
+    },
+    image: {
+      main: '/inventory/corvette1.jpeg',
+      back: '/inventory/testback.jpg',
+      front: '/inventory/testfront.jpg',
+      additional: '/inventory/corvette1.jpeg'
+    },
+    collectionID: '1',
     profileID: '',
     sm: '0',
     ml: '0',
-    out: false
+    related: ['1', '2', '3', '5']
   },
   {
     id: '5',
     name: 'LaLaLa',
     price: '150',
     description: 'this is a crop top as well',
-    image: '/inventory/corvette1.jpeg',
-    backImage: '/inventory/testback.jpg',
-    additionalImage: '/inventory/testfront.jpg',
-    collectionID: '',
+    category: 'crop top',
+
+    details: {
+      materials: ['cotton'],
+      fit: ['oversized'],
+      additional: ['hemmed bottoms', 'discolored', 'seasonsed', 'distressed']
+    },
+    image: {
+      main: '/inventory/corvette1.jpeg',
+      back: '/inventory/testback.jpg',
+      front: '/inventory/testfront.jpg',
+      additional: '/inventory/corvette1.jpeg'
+    },
+    collectionID: '1',
     profileID: '',
     sm: '0',
     ml: '0',
-    out: false
+    related: ['1', '2', '3', '4']
   },
 ]
 

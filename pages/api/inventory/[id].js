@@ -2,7 +2,7 @@ import { inventory } from '../../../data';
 
 export default function handler({ query: { id } }, res) {
     // req.query.id decided to destructure up top
-    const filtered = inventory.filter(article => article.id === id);
+    const filtered = inventory.filter(item => item.id === id);
 
     console.log('id ', id);
     console.log('filtered')

@@ -23,11 +23,12 @@
 
 .begin {
     text-align: left;
+    font-size: 2rem;
+
 }
 
 .center {
     justify-self: center;
-    font-size: 2rem;
     text-align: center;
 }
 

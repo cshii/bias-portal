@@ -14,10 +14,10 @@ const Footer = () => {
                 <div className={footerStyles.group}>
                     <div className={footerStyles.heading}>HELP</div>
                     <Link href='/'>FAQ</Link>
-                    <Link href='/'>CONTACT US</Link>
+                    <Link href='/contact'>CONTACT US</Link>
                     <Link href='/'>SHIPPING & RETURNS</Link>
+                    <Link href='/'>MATERIAL & CARE</Link>
                     <Link href='/'>SIZE GUIDE</Link>
-                    <Link href='/'>CARE GUIDE</Link>
                 </div>
                 <div className={footerStyles.group}>
                     <div className={footerStyles.heading}>BIAS</div>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import inventoryStyles from '../../styles/Inventory.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Row, Col, Typography, Button, Tooltip, Modal, Select, Divider, Carousel } from 'antd';
 const { Text, Title } = Typography;
@@ -15,17 +16,18 @@ const InventoryItem = ({ piece }) => {
 
     return (
         <div>
-            <div style={{ margin: '2rem 6rem 1rem 6rem', position: 'relative', width: '400px', height: '550px' }}>
-                {/* TODO: finish hoverover */}
-                <Image src={piece.image} layout='fill' onMouseOver={(e) => {
-                    console.log('e ', e.currentTarget.src)
-                    console.log('piece ', piece.backImage)
-                    e.currentTarget.src = `${piece.backImage}`;
-                }}
-                    onMouseOut={e => (e.currentTarget.src = `${piece.image}`)} />
+            <Link href={`/inventory/${piece.id}`}>
+                <div style={{ margin: '2rem 6rem 1rem 6rem', position: 'relative', width: '400px', height: '550px' }}>
+                    {/* TODO: finish hoverover */}
 
-
-            </div>
+                    <Image src={piece.image.main} layout='fill' onMouseOver={(e) => {
+                        console.log('e ', e.currentTarget.src)
+                        console.log('piece ', piece.image.back)
+                        e.currentTarget.src = `${piece.image.back}`;
+                    }}
+                        onMouseOut={e => (e.currentTarget.src = `${piece.image.main}`)} />
+                </div>
+            </Link>
             <Row justify='center'>
                 <Text style={{ marginRight: 10 }}>{piece.name}</Text>
                 <Text>${piece.price}</Text>
@@ -50,7 +52,7 @@ const InventoryItem = ({ piece }) => {
                 <Row style={{ margin: '1rem 1rem 1rem 1rem' }}>
                     <Col span={14}>
                         <div style={{ position: 'relative', width: '300px', height: '412.5px', marginLeft: '10%' }}>
-                            <Image id='stockImage' src={piece.image} layout='fill' />
+                            <Image id='stockImage' src={piece.image.main} layout='fill' />
                         </div>
                     </Col>
                     <Col span={10} >

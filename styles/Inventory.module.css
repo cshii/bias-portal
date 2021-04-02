@@ -35,10 +35,49 @@
 }
 
 /* ITEM DETAILS */
-.display {
+.displayImage {
   display: flex;
-  justify-content: flex-start;
-  align-content: flex-end;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.displayImage  button {
+  background: rgb(91, 91, 91) !important;
+}
+
+.displayDetails {
+  display: flex;
+  justify-content: flex-end;
+  /* align-content: flex-end; */
   flex-direction: column;
   min-height: 100%;
 }
+
+.underlineText:hover {
+  color: rgb(175, 175, 175);
+  text-decoration: underline;
+  border-radius: 10px;
+}
+
+/* TODO: slide animation for description details */
+.slide {
+  /* position: absolute; */
+  /* top: -10px; */
+  /* left: -100px;
+  width: 100px;
+  height: 100px;
+  background: blue; */
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Layout from '../layouts/splashLayout';
+import Layout from '../components/layouts/SplashLayout';
 import { server } from '../config';
 import { Row, Col } from 'antd';
 
@@ -11,15 +11,15 @@ const Home = ({ articles }) => {
 
   )
   return (
-    <div className={splashStyles.background}>
+    <div className={splashStyles.background} >
       <div className={splashStyles.screen}>
         <div className={splashStyles.display}>
           <Row>
-            <h1 className={splashStyles.title}><span>BIAS</span> BRANDS</h1>
+            <h1 className={splashStyles.title}><span>CORVETTE</span> x BIAS</h1>
 
           </Row>
           <Row>
-            <p className={splashStyles.description}>CHOOSE SUSTAINABLE FASHION</p>
+            <p className={splashStyles.description}>HANDMADE ON EARTH</p>
           </Row>
         </div>
       </div>
