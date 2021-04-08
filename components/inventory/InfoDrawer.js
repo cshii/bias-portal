@@ -10,11 +10,11 @@ const IconFont = createFromIconfontCN({
     ]
 });
 
-const InfoDrawer = ({ title, details, visible, setClose }) => {
+const InfoDrawer = ({ title, details, visible, setClose, placement }) => {
     return (
         <Drawer
             title={title}
-            placement='left'
+            placement={placement}
             closable={false}
             onClose={() => setClose(false)}
             visible={visible}

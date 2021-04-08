@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Press+Start+2P&family=Prosto+One&display=swap');
+
+
+.title {
+    font-family: 'Press Start 2P', cursive;
+    /* font-family: 'Prosto One', cursive; */
+    /* font-size: 4rem;
+    color: white;
+    margin:0;
+    line-height: 1.15;
+    text-align: center;
+    font-weight: bold; */
+}
+
+.wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+.collectionBackground {
+    background-position: center !important;
+    height: 40vh;
+    width: 100vw;
+    
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* .collectionBackground::after {
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.screen {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }

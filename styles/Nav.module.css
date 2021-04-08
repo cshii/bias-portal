@@ -17,13 +17,13 @@
 
 .nav a {
     color: black;
-    margin: 2rem;
+    margin: 1rem;
     font-weight: bold;
 }
 
 .begin {
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
 }
 
@@ -49,6 +49,6 @@
 
 .splashNav a {
     color: white;
-    margin: 2rem;
+    margin: 1rem;
     font-weight: bold;
 }

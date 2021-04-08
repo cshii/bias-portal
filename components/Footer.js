@@ -1,5 +1,10 @@
+import { useEffect, useState } from 'react';
 import Link from 'next/Link';
 import footerStyles from '../styles/Footer.module.css';
+import InfoDrawer from './inventory/InfoDrawer';
+
+import materialCareInstructions from '../material';
+import sizeGuideDetails from '../size';
 
 import { createFromIconfontCN } from '@ant-design/icons';
 
@@ -8,6 +13,9 @@ const IconFont = createFromIconfontCN({
 });
 
 const Footer = () => {
+    const [materialCare, setMaterialCare] = useState(false);
+    const [sizeGuide, setSizeGuide] = useState(false);
+
     return (
         <div className={footerStyles.footer}>
             <div className={footerStyles.textGroup}>
@@ -16,16 +24,19 @@ const Footer = () => {
                     <Link href='/'>FAQ</Link>
                     <Link href='/contact'>CONTACT US</Link>
                     <Link href='/'>SHIPPING & RETURNS</Link>
-                    <Link href='/'>MATERIAL & CARE</Link>
-                    <Link href='/'>SIZE GUIDE</Link>
+                    <a onClick={()=> setMaterialCare(true)}>MATERIAL & CARE</a>
+                    <a onClick={()=> setSizeGuide(true)}>SIZE GUIDE</a>
                 </div>
                 <div className={footerStyles.group}>
                     <div className={footerStyles.heading}>BIAS</div>
-                    <Link href='/'>OUR STORY</Link>
+                    <Link href='/'>BRAND</Link>
                     <Link href='/'>GIFT CERTIFICATE</Link>
                     <Link href='/'>TERMS & CONDITIONS</Link>
                 </div>
             </div>
+
+            <InfoDrawer title={materialCare ? 'Material & Care' : 'Size Guide'} details={materialCare ? materialCareInstructions : sizeGuideDetails} visible={materialCare ? materialCare : sizeGuide} setClose={materialCare ? setMaterialCare : setSizeGuide} placement='right'/>
+
             <div className={footerStyles.iconGroup}>
                 <div className={footerStyles.heading}>SOCIALIZE WITH US!</div>
                 <div className={footerStyles.iconlist}>

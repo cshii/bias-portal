@@ -30,16 +30,10 @@ const SplashNav = () => {
                 <Col span={12} className=
                     {navStyles.center} >
                     <Link href='/inventory'>SHOP</Link>
-                    <Dropdown overlay={menu} trigger={['click']}>
-                        <a className='ant-dropdown-link' onClick={e => e.preventDefault()}>
-                            {/* <Text style={{ color: 'white', fontWeight: 'bold' }}>
-                                COLLECTIONS
-                            </Text> */}
-                            COLLECTIONS <DownOutlined/>
-                        </a>
-                    </Dropdown>
-
-                    <Link href='/about'>OUR STORY</Link>
+                    <Link href='/collections'>COLLECTIONS</Link>
+                    <Link href='/about'>BRAND</Link>
+                    <Link href='/news'>NEWS</Link>
+                    <Link href='/contact'>CONTACT</Link>
 
                 </Col>
 

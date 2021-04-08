@@ -30,25 +30,30 @@ const Nav = () => {
                 <Col span={12} className=
                     {navStyles.center} >
                     <Link href='/inventory'>SHOP</Link>
-                    <Dropdown overlay={menu}>
-                        <a>
-                            <Text style={{ color: 'black', fontWeight: 'bold' }}>
-                                COLLECTIONS <DownOutlined />
-                            </Text>
-                        </a>
-                    </Dropdown>
-                    <Link href='/about'>OUR STORY</Link>
 
+                    {/* <Dropdown overlay={menu}>
+                        <a>
+                            <Text style={{ color: 'black', fontWeight: 'bold' }}> */}
+                    <Link href='/collections'>
+                        COLLECTIONS
+                    </Link>
+
+                    {/* </Text>
+                        </a>
+                    </Dropdown> */}
+                    <Link href='/about'>BRAND</Link>
+                    <Link href='/news'>NEWS</Link>
+                    <Link href='/contact'>CONTACT</Link>
                 </Col>
 
 
 
                 <Col span={6} className={navStyles.end} >
                     <Input style={{ width: '8vw', fontWeight: 'bold' }} placeholder='SEARCH' bordered={false} suffix=
-                    {<SearchOutlined />} />
+                        {<SearchOutlined />} />
 
                     {/* TODO: unsure why link isn't working here */}
-                    <a href='/cart' style={{margin: 16}}>
+                    <a href='/cart' style={{ margin: 16 }}>
 
 
                         <ShoppingOutlined />

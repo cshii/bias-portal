@@ -8,7 +8,7 @@ import { Row, Col, Typography, Button, Tooltip, Modal, Select, Divider, Carousel
 const { Text, Title } = Typography;
 const { Option } = Select;
 
-import { ExpandOutlined } from '@ant-design/icons';
+import { TagOutlined } from '@ant-design/icons';
 
 
 const InventoryItem = ({ piece }) => {
@@ -17,28 +17,25 @@ const InventoryItem = ({ piece }) => {
     return (
         <div>
             <Link href={`/inventory/${piece.id}`}>
-                <div style={{ margin: '2rem 6rem 1rem 6rem', position: 'relative', width: '400px', height: '550px' }}>
+                <div style={{ margin: '2rem 6rem 1rem 6rem', position: 'relative', width: 440, height: 550 }}>
                     {/* TODO: finish hoverover */}
 
-                    <Image src={piece.image.main} layout='fill' onMouseOver={(e) => {
-                        console.log('e ', e.currentTarget.src)
-                        console.log('piece ', piece.image.back)
-                        e.currentTarget.src = `${piece.image.back}`;
-                    }}
+                    <Image src={piece.image.main} layout='fill' onMouseOver={(e) => e.currentTarget.src = `${piece.image.back}`}
                         onMouseOut={e => (e.currentTarget.src = `${piece.image.main}`)} />
                 </div>
             </Link>
-            <Row justify='center'>
+            <Row justify='center' align='middle'>
+                <Tooltip title='Preview'>
+                    <Button shape='circle' type='text' icon={<TagOutlined />} onClick={() => setPreviewVisible(true)} style={{ margin: 4 }} />
+                </Tooltip>
+                <Link href={`/inventory/${piece.id}`}>
+                
                 <Text style={{ marginRight: 10 }}>{piece.name}</Text>
+                </Link>
                 <Text>${piece.price}</Text>
 
             </Row>
-            <Row justify='center' style={{ marginTop: 5 }}>
-
-                <Tooltip title='Preview'>
-                    <Button shape='circle' icon={<ExpandOutlined />} onClick={() => setPreviewVisible(true)} />
-                </Tooltip>
-            </Row>
+            
 
             <Modal visible={previewVisible}
                 okText='add to cart'
@@ -92,4 +89,4 @@ const InventoryItem = ({ piece }) => {
     )
 }
 
-export default InventoryItem
+export default InventoryItem;

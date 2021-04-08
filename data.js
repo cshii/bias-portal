@@ -8,7 +8,9 @@ export const inventory = [
     details: {
       materials: ['cotton', 'spandex'],
       fits: ['oversized'],
-      additional: ['hemmed bottoms', 'discolored', 'seasonsed', 'distressed']
+      additional: ['hemmed bottoms', 'discolored', 'seasonsed', 'distressed'],
+      dimensions: ['13in x 14in'],
+      sourced: ['details about source']
     },
     image: {
       main: '/inventory/corvette1.jpeg',
@@ -17,10 +19,10 @@ export const inventory = [
       additional: '/inventory/corvette1.jpeg'
     },
 
-    collectionID: '1',
-    profileID: '',
-    sm: '1',
-    ml: '1',
+    collectionID: 1,
+    profileIDs: [],
+    sm: 1,
+    ml: 1,
     related: ['2', '3', '4', '5']
   },
   {
@@ -41,10 +43,10 @@ export const inventory = [
       front: '/inventory/testfront.jpg',
       additional: '/inventory/corvette1.jpeg'
     },
-    collectionID: '1',
-    profileID: '',
-    sm: '1',
-    ml: '0',
+    collectionID: 1,
+    profileIDs: [],
+    sm: 1,
+    ml: 0,
     related: ['1', '3', '4', '5']
   },
   {
@@ -65,10 +67,10 @@ export const inventory = [
       front: '/inventory/testfront.jpg',
       additional: '/inventory/corvette1.jpeg'
     },
-    collectionID: '1',
-    profileID: '',
-    sm: '0',
-    ml: '0',
+    collectionID: 1,
+    profileIDs: [],
+    sm: 0,
+    ml: 0,
     related: ['1', '2', '4', '5']
   },
   {
@@ -89,10 +91,10 @@ export const inventory = [
       front: '/inventory/testfront.jpg',
       additional: '/inventory/corvette1.jpeg'
     },
-    collectionID: '1',
-    profileID: '',
-    sm: '0',
-    ml: '0',
+    collectionID: 1,
+    profileIDs: [],
+    sm: 0,
+    ml: 0,
     related: ['1', '2', '3', '5']
   },
   {
@@ -113,34 +115,34 @@ export const inventory = [
       front: '/inventory/testfront.jpg',
       additional: '/inventory/corvette1.jpeg'
     },
-    collectionID: '1',
-    profileID: '',
-    sm: '0',
-    ml: '0',
+    collectionID: 1,
+    profileIDs: [],
+    sm: 0,
+    ml: 0,
     related: ['1', '2', '3', '4']
   },
 ]
 
-export const collection = [
+export const collections = [
   {
     id: '1',
-    name: 'Corvette',
-    description: '',
-    image: '',
+    name: 'CORVETTE x BIAS',
+    description: 'Selectively picked by hand, each piece was reworked to best fit their vibe.',
+    images: { background: '/collections/marcy-pattern.png', },
     active: true
   },
   {
     id: '2',
-    name: '',
+    name: 'BIAS FIT',
     description: '',
-    image: '',
+    images: { background: '/collections/marcy-noback.png', },
     active: false
   },
   {
     id: '3',
-    name: '',
+    name: 'SYMPTOMS x BIAS',
     description: '',
-    image: '',
+    images: { background: '/collections/marcy-pattern.png', },
     active: false
   },
 ]

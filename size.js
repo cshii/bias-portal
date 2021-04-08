@@ -6,26 +6,27 @@ const sizeGuideDetails = [
 
             size: 'small',
             measurements: {
-                length: '13 / 13.5 in',
-                width: '10 in',
+                bust: '32 - 35 in',
+                wasit: '26 - 29 in',
+                hips: '36- 38 in'
             }
         },
         {
             size: 'medium',
             measurements: {
-                length: '14 / 14.5 in ',
-                width: '11 in'
+                bust: '35 1/2 - 38 in',
+                wasit: '29 1/2 - 32 in',
+                hips: '39 - 41 in'
             }
         },
         {
             size: 'large',
             measurements: {
-                length: '15 / 15.5 in ',
-                width: '12 in'
+                bust: '38 1/2 - 42 in',
+                wasit: '33 - 36 in',
+                hips: '43 - 44 in'
             }
-        }
-        ]
-
+        }]
     },
     {
         category: 'sport bra crop',
@@ -34,52 +35,57 @@ const sizeGuideDetails = [
 
             size: 'small',
             measurements: {
-                length: '13 in / 13.5 in',
-                width: '10 in',
+                bust: '32 - 35 in',
+                wasit: '26 - 29 in',
+                hips: '36- 38 in'
             }
         },
         {
             size: 'medium',
             measurements: {
-                length: '14 in / 14.5 in ',
-                width: '11 in'
+                bust: '35 1/2 - 38 in',
+                wasit: '29 1/2 - 32 in',
+                hips: '39 - 41 in'
             }
         },
         {
             size: 'large',
             measurements: {
-                length: '15 in / 15.5 in ',
-                width: '12 in'
+                bust: '38 1/2 - 42 in',
+                wasit: '33 - 36 in',
+                hips: '43 - 44 in'
             }
-        }
-        ]
-
+        }]
     },
     {
         category: 'jacket',
         icon: 'icon-yurongfu',
-        guide: [{
+        guide: [
+            {
 
-            size: 'small',
-            measurements: {
-                length: '50 in',
-                width: '30 in',
+                size: 'small',
+                measurements: {
+                    bust: '32 - 35 in',
+                    wasit: '26 - 29 in',
+                    hips: '36- 38 in'
+                }
+            },
+            {
+                size: 'medium',
+                measurements: {
+                    bust: '35 1/2 - 38 in',
+                    wasit: '29 1/2 - 32 in',
+                    hips: '39 - 41 in'
+                }
+            },
+            {
+                size: 'large',
+                measurements: {
+                    bust: '38 1/2 - 42 in',
+                    wasit: '33 - 36 in',
+                    hips: '43 - 44 in'
+                }
             }
-        },
-        {
-            size: 'medium',
-            measurements: {
-                length: '55 in',
-                width: '35 in'
-            }
-        },
-        {
-            size: 'large',
-            measurements: {
-                length: '60 in',
-                width: '40 in'
-            }
-        }
         ]
 
     },
@@ -90,52 +96,58 @@ const sizeGuideDetails = [
 
             size: 'small',
             measurements: {
-                length: '50 in',
-                width: '25 in',
+                bust: '32 - 35 in',
+                wasit: '26 - 29 in',
+                hips: '36- 38 in'
             }
         },
         {
             size: 'medium',
             measurements: {
-                length: '52 in',
-                width: '28 in'
+                bust: '35 1/2 - 38 in',
+                wasit: '29 1/2 - 32 in',
+                hips: '39 - 41 in'
             }
         },
         {
             size: 'large',
             measurements: {
-                length: '55 in',
-                width: '31 in'
+                bust: '38 1/2 - 42 in',
+                wasit: '33 - 36 in',
+                hips: '43 - 44 in'
             }
-        }
-        ]
+        }]
 
     },
     {
         category: 'skirt',
         icon: 'icon-duanqun',
-        guide: [{
+        guide: [
+            {
 
-            size: 'small',
-            measurements: {
-                length: '13 / 13.5 in',
-                width: '35 in',
+                size: 'small',
+                measurements: {
+                    bust: '32 - 35 in',
+                    wasit: '26 - 29 in',
+                    hips: '36- 38 in'
+                }
+            },
+            {
+                size: 'medium',
+                measurements: {
+                    bust: '35 1/2 - 38 in',
+                    wasit: '29 1/2 - 32 in',
+                    hips: '39 - 41 in'
+                }
+            },
+            {
+                size: 'large',
+                measurements: {
+                    bust: '38 1/2 - 42 in',
+                    wasit: '33 - 36 in',
+                    hips: '43 - 44 in'
+                }
             }
-        },
-        {
-            size: 'medium',
-            measurements: {
-                length: '14 / 14.5 in ',
-                width: '36 in'
-            }
-        },
-        {
-            size: 'large',
-            measurements: {
-                length: '15 / 15.5 in ',
-                width: '37 in'
-            }
-        }
         ]
 
     },

@@ -13,7 +13,7 @@ import { Row, Col, Typography, Button, Select, Divider, Carousel } from 'antd';
 const { Text, Title } = Typography;
 const { Option } = Select;
 
-const piece = ({ piece }) => {
+const Piece = ({ piece }) => {
     const [details, setDetails] = useState(false);
     const [materialCare, setMaterialCare] = useState(false);
     const [sizeGuide, setSizeGuide] = useState(false);
@@ -21,35 +21,11 @@ const piece = ({ piece }) => {
     const [sizeGuideDetail, setSizeGuideDetail] = useState([]);
 
     useEffect(() => {
-        // const getInstructions = async () => {
-        //     let filteredInstructions = await piece.details.materials.map((material)=> {
-        //         let filter = materialCareInstructions.filter((instruction) => material === instruction.material)[0];
-        //         return filter;
-        //     })
-        //     setMaterialInstruction(filteredInstructions);
-        //     console.log('materialcare intrsuction: ', materialCareInstructions);
-
-
-        //     let filteredSize = await sizeGuideDetails.filter((detail) => detail.category === piece.category)[0];
-        //     console.log('filteredSize: ', filteredSize)
-        //     setSizeGuideDetail(filteredSize);
-
-        //     setSizeGuideDetail('test');
-        //     setSizeStuff(filteredSize)
-        //     console.log('sizeGuideDetail: ', sizeGuideDetail)
-        //     console.log('sizeStuff: ', sizeStuff)
-
-        // };
-        // getInstructions();
         let filteredInstructions = piece.details.materials.map((material)=> {
             let filter = materialCareInstructions.filter((instruction) => material === instruction.material)[0];
             return filter;
         })
         setMaterialInstruction(filteredInstructions);
-        console.log('filteredInstructions: ', filteredInstructions);
-
-        console.log('materialcare intrsuction: ', materialCareInstruction);
-
         
         let filteredSize = sizeGuideDetails.filter((detail) => detail.category === piece.category);
         setSizeGuideDetail(filteredSize);
@@ -127,7 +103,7 @@ const piece = ({ piece }) => {
                 </Col>
             </Row>
             {materialCare || sizeGuide ? <InfoDrawer title={materialCare ? 'Material & Care' : 'Size Guide'} details={materialCare ? materialCareInstruction : sizeGuideDetail}
-                visible={materialCare ? materialCare : sizeGuide} setClose={materialCare ? setMaterialCare : setSizeGuide} /> : null}
+                visible={materialCare ? materialCare : sizeGuide} setClose={materialCare ? setMaterialCare : setSizeGuide} placement='left'/> : null}
             <Divider />
             <Row style={{ width: '90vw' }}>
                 <AlsoLike ids={piece.related} />
@@ -136,6 +112,8 @@ const piece = ({ piece }) => {
         </div>
     )
 }
+
+// TODO: use store
 
 export const getStaticProps = async (context) => {
 
@@ -163,32 +141,4 @@ export const getStaticPaths = async () => {
     }
 }
 
-// export const getStaticProps = async (context) => {
-//   const res = await fetch(
-//     `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
-//   )
-
-//   const article = await res.json()
-
-//   return {
-//     props: {
-//       article,
-//     },
-//   }
-// }
-
-// export const getStaticPaths = async () => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
-
-//   const articles = await res.json()
-
-//   const ids = articles.map((article) => article.id)
-//   const paths = ids.map((id) => ({ params: { id: id.toString() } }))
-
-//   return {
-//     paths,
-//     fallback: false,
-//   }
-// }
-
-export default piece;
+export default Piece;
